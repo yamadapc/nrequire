@@ -1,0 +1,15 @@
+{
+  "name": "require-git",
+  "version": "1.0.0",
+  "description": "Require git repositories on Node.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mocha-spec-cov-alt": "git://github.com/yamadapc/mocha-spec-cov-alt.git",
+    "written-number": "git://github.com/yamadapc/js-written-number.git"
+  }
+}
