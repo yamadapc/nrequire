@@ -4,12 +4,37 @@
   "description": "Require git repositories on Node.js",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --require blanket -R mocha-spec-cov-alt"
   },
-  "author": "",
+  "author": "Pedro Tacla Yamada",
   "license": "MIT",
   "dependencies": {
     "mocha-spec-cov-alt": "git://github.com/yamadapc/mocha-spec-cov-alt.git",
     "written-number": "git://github.com/yamadapc/js-written-number.git"
+  },
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "mocha": "^2.1.0",
+    "mocha-spec-cov-alt": "git://github.com/yamadapc/mocha-spec-cov-alt.git",
+    "remove": "^0.1.5",
+    "should": "^6.0.1"
+  },
+  "config": {
+    "blanket": {
+      "data-cover-never": [
+        "node_modules"
+      ],
+      "pattern": [
+        "lib",
+        "YOUR",
+        "MODULE",
+        "DIRECTORIES",
+        "HERE"
+      ],
+      "spec-cov": {
+        "threshold": 80,
+        "localThreshold": 80
+      }
+    }
   }
 }
