@@ -17,14 +17,22 @@ describe('require-git', function() {
       });
     });
 
+    after(function(done) {
+      var t = path.join(__dirname, '..', 'node_modules', 'written-number');
+      remove(t, done);
+    });
+
     it('gets exposed', function() {
       should.exist(requireGit);
       requireGit.should.be.instanceof(Function);
     });
 
     it('installs from a git repository and returns its module', function() {
-      var old = fs.readdirSync(path.join(__dirname, '..', 'node_modules'));
-      old.should.not.include('written-number');
+      var oldModules = fs.readdirSync(path.join(__dirname, '..', 'node_modules'));
+      oldModules.should.not.containEql('written-number');
+      requireGit('written-number')
+      var newModules = fs.readdirSync(path.join(__dirname, '..', 'node_modules'));
+      newModules.should.containEql('written-number');
     });
   });
 });
