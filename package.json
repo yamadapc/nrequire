@@ -9,8 +9,7 @@
   "author": "Pedro Tacla Yamada",
   "license": "MIT",
   "dependencies": {
-    "mocha-spec-cov-alt": "git://github.com/yamadapc/mocha-spec-cov-alt.git",
-    "written-number": "git://github.com/yamadapc/js-written-number.git"
+    "lodash": "^3.10.0"
   },
   "devDependencies": {
     "blanket": "^1.1.6",
