@@ -1,5 +1,8 @@
 nrequire
 ========
+[![NPM](https://nodei.co/npm/nrequire.png)](https://nodei.co/npm/nrequire/)
+[![Build Status](https://travis-ci.org/yamadapc/nrequire.svg)](https://travis-ci.org/yamadapc/nrequire)
+- - -
 Automatic `require`. Installs dependencies from git and NPM without NPM.
 
 ## Usage
