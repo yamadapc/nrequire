@@ -1,20 +1,17 @@
 {
-  "name": "require-git",
+  "name": "nrequire",
   "version": "1.0.0",
-  "description": "Require git repositories on Node.js",
+  "description": "Automatic `require`. Installs dependencies from git and NPM without NPM",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha --require blanket -R mocha-spec-cov-alt"
   },
   "author": "Pedro Tacla Yamada",
   "license": "MIT",
-  "dependencies": {
-    "lodash": "^3.10.0"
-  },
   "devDependencies": {
     "blanket": "^1.1.6",
     "mocha": "^2.1.0",
-    "mocha-spec-cov-alt": "git://github.com/yamadapc/mocha-spec-cov-alt.git",
+    "mocha-spec-cov-alt": "^0.3.0",
     "remove": "^0.1.5",
     "should": "^6.0.1"
   },

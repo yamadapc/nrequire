@@ -3,10 +3,10 @@ var fs = require('fs');
 var path = require('path');
 var remove = require('remove');
 var should = require('should');
-var requireGit = require('..');
+var nrequire = require('..');
 
-describe('require-git', function() {
-  describe('requireGit', function() {
+describe('nrequire', function() {
+  describe('nrequire', function() {
     before(function(done) {
       var t = path.join(__dirname, '..', 'node_modules', 'written-number');
       fs.exists(t, function(e) {
@@ -23,14 +23,15 @@ describe('require-git', function() {
     });
 
     it('gets exposed', function() {
-      should.exist(requireGit);
-      requireGit.should.be.instanceof(Function);
+      should.exist(nrequire);
+      nrequire.should.be.instanceof(Function);
     });
 
     it('installs from a git repository and returns its module', function() {
+      this.timeout(10000);
       var oldModules = fs.readdirSync(path.join(__dirname, '..', 'node_modules'));
       oldModules.should.not.containEql('written-number');
-      requireGit('written-number')
+      nrequire('written-number')
       var newModules = fs.readdirSync(path.join(__dirname, '..', 'node_modules'));
       newModules.should.containEql('written-number');
     });
