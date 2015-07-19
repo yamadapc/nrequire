@@ -5,6 +5,8 @@ nrequire
 - - -
 Automatic `require`. Installs dependencies from git and NPM without NPM.
 
+![demo](/demo.gif)
+
 ## Usage
 ```javascript
 var nrequire = require('nrequire');
