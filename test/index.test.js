@@ -1,6 +1,8 @@
 'use strict'; /* global describe, it, before */
 var fs = require('fs');
+var child_process = require('child_process');
 var path = require('path');
+var makeStub = require('mocha-make-stub');
 var remove = require('remove');
 var should = require('should');
 var nrequire = require('..');
@@ -34,6 +36,14 @@ describe('nrequire', function() {
       nrequire('written-number')
       var newModules = fs.readdirSync(path.join(__dirname, '..', 'node_modules'));
       newModules.should.containEql('written-number');
+    });
+
+    describe('when the dependency is already installed', function() {
+      makeStub(child_process, 'execSync');
+      it('doesn\'t trigger unnecessary npm commands', function() {
+        nrequire('written-number');
+        this.execSync.called.should.not.be.ok;
+      });
     });
   });
 });
