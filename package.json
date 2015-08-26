@@ -6,6 +6,8 @@
   "scripts": {
     "test": "mocha --require blanket -R mocha-spec-cov-alt"
   },
+  "website": "https://github.com/yamadapc/nrequire",
+  "repository": "git@github.com:yamadapc/nrequire.git",
   "author": "Pedro Tacla Yamada",
   "license": "MIT",
   "devDependencies": {
