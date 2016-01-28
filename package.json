@@ -4,19 +4,20 @@
   "description": "Automatic `require`. Installs dependencies from git and NPM without NPM",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --require blanket -R mocha-spec-cov-alt"
+    "test": "mocha --require blanket -R mocha-spec-cov-alt",
+    "test-html-cov": "mocha --require blanket -R html-cov > coverage.html"
   },
   "website": "https://github.com/yamadapc/nrequire",
   "repository": "git@github.com:yamadapc/nrequire.git",
   "author": "Pedro Tacla Yamada",
   "license": "MIT",
   "devDependencies": {
-    "blanket": "^1.1.6",
+    "blanket": "1.1.7",
     "mocha": "^2.1.0",
     "mocha-make-stub": "^2.3.2",
-    "mocha-spec-cov-alt": "^0.3.0",
+    "mocha-spec-cov-alt": "^1.1.0",
     "remove": "^0.1.5",
-    "should": "^6.0.1"
+    "should": "^8.2.1"
   },
   "config": {
     "blanket": {
@@ -24,11 +25,7 @@
         "node_modules"
       ],
       "pattern": [
-        "lib",
-        "YOUR",
-        "MODULE",
-        "DIRECTORIES",
-        "HERE"
+        "lib"
       ],
       "spec-cov": {
         "threshold": 80,
