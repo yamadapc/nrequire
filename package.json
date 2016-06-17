@@ -15,7 +15,7 @@
     "blanket": "1.1.7",
     "mocha": "^2.1.0",
     "mocha-make-stub": "^2.3.2",
-    "mocha-spec-cov-alt": "^1.1.0",
+    "mocha-spec-cov-alt": "^1.1.1",
     "remove": "^0.1.5",
     "should": "^8.2.1"
   },
